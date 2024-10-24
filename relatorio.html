@@ -7,61 +7,47 @@
     <link rel="stylesheet" href="css/relatorio.css">
 </head>
 <body>
-
-<!-- abrir o dialog de justificar ausencias-->
-<dialog id="dialog-ausencia">
-    <form method="dialog">
-    <p>
-
-        <label for="Justificativa-ausencia">
-            <input type="text" required placeholder="Justificativa da ausencia">
-            <br><br>
-            atestado(caso necessite)
-            <input type="file">
-            <br>
-        <br>
-        <input type="date">
-        <br>
-        <br>
-        <input type="time">
-        
-        </label>
-<div>
-    <input type="" id="fechar-ausencia" value="enviar">
+    <button id="menu-toggle" class="menu-button">☰</button> <!-- Botão do menu -->
+    
+    <div class="sidebar" id="sidebar">
+        <button id="mostrar-ausencia">Justificativa de ausência</button>
+        <button>Adicionar uma observação em um registro</button>
+        <button>Editar um registro</button>
     </div>
-    </form>
-</dialog>
-</p>
 
-<button id="mostrar-ausencia">Justificativa de ausência</button>
-<!--até aqui é de ausencia-->
+    <div class="main-content">
+        <h1>Relatórios Passados</h1>
+        <div>
+            <dialog open>
+                Relatórios passados
+                <br><br>
+                A fazer
+            </dialog>
+        </div>
+    </div>
 
-
-
-            <button>Adicionar uma observação em um registro</button>
-            <button>Editar um resgistro</button>
-         
-
-<br><br><br><br><br>
-
-            <div>
-                <dialog open>
-                relatorios passados
-
-
-
-                a fazer
-
-
-
-
-
-                </dialog>
-            </div>
-
-
-
-
+    <dialog id="dialog-ausencia">
+        <form method="dialog">
+            <p>
+             
+                <label for="Justificativa-ausencia">
+                    <input type="text" required placeholder="Justificativa da ausência">
+                    <br><br>
+                    Atestado (caso necessite)
+                    <input type="file">
+                    <br>
+                    <br>
+                    <input type="date">
+                    <br>
+                    <br>
+                    <input type="time">
+                </label>
+                <div>
+                    <input type="submit" id="fechar-ausencia" value="Enviar">
+                </div>
+            </p>
+        </form>
+    </dialog>
 
     <script src="js/relatorio.js"></script>
 </body>

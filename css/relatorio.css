@@ -1,0 +1,137 @@
+/* Botão do menu */
+.menu-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000; 
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.menu-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px; 
+    background: linear-gradient(135deg, #4a148c, #216aae); /* Gradiente vibrante */
+    padding: 30px;
+    height: 100vh;
+    position: fixed;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateX(-100%); 
+    padding-top: 60px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
+    overflow: hidden; /* Para esconder conteúdos extras */
+}
+
+/* Ativar a sidebar */
+.sidebar.active {
+    transform: translateX(0); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); 
+}
+
+/* Botões do menu */
+.sidebar button {
+    background: none;
+    border: none;
+    color: white;
+    text-align: left;
+    padding: 15px 20px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    position: relative; 
+    font-size: 16px; /* Aumentar fonte para melhor legibilidade */
+}
+
+.sidebar button::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: white; /* Ponto de destaque */
+    transform: translateY(-50%);
+    transition: background 0.3s; /* Transição do ponto */
+}
+
+.sidebar button:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
+    transform: translateX(10px); 
+}
+
+.sidebar button:hover::before {
+    background: #2dfff5; /* Mudança de cor no hover */
+}
+
+/* Estilo para o conteúdo principal */
+.main-content {
+    margin-left: 270px; 
+    padding: 20px;
+    width: calc(100% - 270px);
+    transition: margin 0.3s; /* Transição suave */
+}
+
+/* Estilo para o diálogo */
+dialog {
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(22, 56, 246, 0.2);
+    transition: transform 0.3s ease; 
+}
+
+/* Inputs */
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="file"] {
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s; 
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="file"]:focus {
+    border-color: #d5006d; /* Borda rosa ao focar */
+}
+
+div {
+    margin-top: 20px;
+}
+
+/* Configurações do diálogo */
+dialog {
+    margin: 20px auto;
+    width: 300px;
+    animation: slideIn 0.3s; 
+}
+
+/* Animação do diálogo */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

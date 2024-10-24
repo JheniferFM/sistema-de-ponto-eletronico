@@ -32,3 +32,11 @@ const btndialogAusencia = document.getElementById("mostrar-ausencia");
 
 // Recuperar dados do Local Storage
 const registros = localStorage.getItem("ponto");
+
+
+
+
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('active'); // Adiciona ou remove a classe 'active'
+});
